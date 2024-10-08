@@ -55,7 +55,7 @@
                     </div>
                     <div class="col-6">
                         <div class="buy-btn text-right">
-                            <a href="signin.php" class="btn btn-all" target="_blank">Sign in</a>
+                            <a href="signIn.php" class="btn btn-all" target="_blank">Sign in</a>
                         </div>
                     </div>
                 </div>
@@ -73,7 +73,7 @@
                             <div class="hero-slider-content">
                                 <h4 class="slide-subtitle pb-3">Business & Corporate Responsive Template</h4>
                                 <h2 class="slide-title">Karen - Corporate Business HTML5 Template</h2>
-                                <a href="karen/about.html" class="btn btn-all">Read More</a>
+                                <a href="SignUp.php" class="btn btn-all">Sign Up</a>
                             </div>
 						</div>
                     </div>
