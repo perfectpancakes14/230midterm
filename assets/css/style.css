@@ -278,6 +278,7 @@ textarea {
 
 .main-menu-wrapper {
   padding: 20px 0; }
+  
   .main-menu-wrapper.header-transparent {
     padding: 28px 0; }
 
@@ -520,21 +521,10 @@ textarea {
 01. Slider area
 --------------------------*/
 .hero-slider {
-  height: 890px; }
-  @media only screen and (min-width: 992px) and (max-width: 1199.98px), only screen and (min-width: 768px) and (max-width: 991.98px) {
-    .hero-slider {
-      height: 550px; } }
-  @media only screen and (max-width: 767.98px) {
-    .hero-slider {
-      height: 500px;
-      padding-top: 0; } }
-  @media only screen and (max-width: 575.98px) {
-    .hero-slider {
-      height: 650px;
-      padding-top: 0; } }
+	padding: 20px;
+	margin-top: 50px; }
 
 .hero-slider-item {
-  height: 850px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -542,17 +532,7 @@ textarea {
   -ms-flex-align: center;
   align-items: center;
   padding-top: 88px; }
-  @media only screen and (min-width: 992px) and (max-width: 1199.98px), only screen and (min-width: 768px) and (max-width: 991.98px) {
-    .hero-slider-item {
-      height: 550px; } }
-  @media only screen and (max-width: 767.98px) {
-    .hero-slider-item {
-      height: 500px;
-      padding-top: 0; } }
-  @media only screen and (max-width: 575.98px) {
-    .hero-slider-item {
-      height: 650px;
-      padding-top: 0; } }
+  
 
 .slider-thumb {
   float: right; }
