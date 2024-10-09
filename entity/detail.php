@@ -1,5 +1,6 @@
 <?php 
 session_start();
+$i = $_GET['post_id'];
 ?>
 <html class="no-js" lang="zxx">
 

@@ -101,7 +101,7 @@ session_start();
 					?>
                     <div class="col-md-4">
                         <div class="demo-preview-item mt-50">
-                            <a href="karen/index.html">
+                            <?php echo "<a href=detail.php?post_id=".$i.">"?>
                                 <div class="demo-item">
                                     <div class="dots">
                                         <div class="dot"></div>
