@@ -75,11 +75,16 @@ session_start();
                             <div class="hero-slider-content">
                                 <h4 class="slide-subtitle pb-3">Date: (insert date here)</h4>
                                 <h2 class="slide-title">Insert Account Name Here</h2>
+								
 								<p>Moby-Dick, written by Herman Melville, follows the journey of Ishmael, a sailor who joins the whaling ship Pequod, captained by the enigmatic and vengeful Ahab. Ahab is obsessed with hunting down Moby Dick, a massive white whale that had previously destroyed his ship and bitten off his leg.
 
 As the Pequod sails across the oceans, Ishmael encounters a diverse crew and learns about the whaling industry, the dangers of the sea, and Ahab's relentless quest for revenge. The novel explores themes of obsession, the struggle between man and nature, and the limits of knowledge.
 
 In the climactic confrontation, Ahab finally finds Moby Dick, leading to a tragic and destructive showdown that results in the loss of the ship and its crew, with Ishmael as the sole survivor, left to tell the tale. The novel is both an adventure and a profound meditation on humanity's place in the universe.</p>
+								<?php if(/*the posts email*/ 1==1 /*the session email*/) {?>
+									<a href="edit.php" class="btn btn-all">edit post</a>
+									<a href="delete.php" class="btn btn-all">delete post</a>
+								<?php } ?>
                                 <a href="index.php" class="btn btn-all">Return to Feed</a>
                             </div>
 						</div>
