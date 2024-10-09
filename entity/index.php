@@ -57,7 +57,7 @@ session_start();
                     </div>
                     <div class="col-6">
                         <div class="buy-btn text-right">
-                            <a href="signOut.php" class="btn btn-all" target="_blank">Sign out</a>
+                            <a href="../signOut.php" class="btn btn-all" target="_blank">Sign out</a>
                         </div>
                     </div>
                 </div>
@@ -109,15 +109,15 @@ session_start();
                                         <div class="dot"></div>
                                     </div>
                                     <div class="demo-item__thumb">
-                                        <img src="assets/img/demo/index-1.jpg" alt="demo thumbnail">
+                                        <p>Date here</p>
                                         <div class="overlay">
                                             <div class="btn btn-demo">
-                                                View Demo
+                                                View Post
                                             </div>
                                         </div>
                                     </div>
                                     <div class="demo-item__info">
-                                        <h6>Home Version 01</h6>
+                                        <h6>Name of Account</h6>
                                     </div>
                                 </div>
                             </a>
