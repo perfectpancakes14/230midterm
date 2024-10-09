@@ -6,7 +6,7 @@ session_start();
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Karen - Corporate Business HTML5 Template</title>
+    <title>Karen Social Media Site</title>
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -57,7 +57,7 @@ session_start();
                     </div>
                     <div class="col-6">
                         <div class="buy-btn text-right">
-                            <a href="signin.php" class="btn btn-all" target="_blank">Sign in</a>
+                            <a href="signOut.php" class="btn btn-all" target="_blank">Sign out</a>
                         </div>
                     </div>
                 </div>
@@ -73,8 +73,8 @@ session_start();
                     <div class="row align-items-center justify-content-between">
                         <div class="col-6">
                             <div class="hero-slider-content">
-                                <h4 class="slide-subtitle pb-3">Business & Corporate Responsive Template</h4>
-                                <h2 class="slide-title">Karen - Corporate Business HTML5 Template</h2>
+                                <h4 class="slide-subtitle pb-3">Blogging and Social Media Site</h4>
+                                <h2 class="slide-title">Karen Social</h2>
                                 <a href="karen/about.html" class="btn btn-all">Read More</a>
                             </div>
 						</div>
