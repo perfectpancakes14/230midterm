@@ -6,7 +6,7 @@ session_start();
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Karen - Corporate Business HTML5 Template</title>
+    <title>Karen Social Media Site</title>
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -57,7 +57,7 @@ session_start();
                     </div>
                     <div class="col-6">
                         <div class="buy-btn text-right">
-                            <a href="signin.php" class="btn btn-all" target="_blank">Sign in</a>
+                            <a href="../signOut.php" class="btn btn-all" target="_blank">Sign out</a>
                         </div>
                     </div>
                 </div>
@@ -73,9 +73,9 @@ session_start();
                     <div class="row align-items-center justify-content-between">
                         <div class="col-6">
                             <div class="hero-slider-content">
-                                <h4 class="slide-subtitle pb-3">Business & Corporate Responsive Template</h4>
-                                <h2 class="slide-title">Karen - Corporate Business HTML5 Template</h2>
-                                <a href="karen/about.html" class="btn btn-all">Read More</a>
+                                <h4 class="slide-subtitle pb-3">Blogging and Social Media Site</h4>
+                                <h2 class="slide-title">Karen Social</h2>
+                                <a href="" class="btn btn-all">Create Post</a>
                             </div>
 						</div>
                     </div>
@@ -89,16 +89,19 @@ session_start();
                 <div class="row">
                     <div class="col-12">
                         <div class="section-title section-space text-center">
-                            <h5 class="sub-title pb-3">START WITH A DEMO</h5>
-                            <h2 class="h1 title"><span>02+ Unique Homepages</span> for Multiple Purposes</h2>
+                            <h5 class="sub-title pb-3">Karen Social Feed</h5>
+                            <h2 class="h1 title"><span>Karen's Top 9</span> Most Recent Posts</h2>
                         </div>
                     </div>
                 </div>
                 <div class="row mtn-50">
                     <!-- demo single item start -->
+					<?php 
+					for($i=0;$i<9;$i++){ 
+					?>
                     <div class="col-md-4">
                         <div class="demo-preview-item mt-50">
-                            <a href="karen/index.html">
+                            <?php echo "<a href=detail.php?post_id=".$i.">"?>
                                 <div class="demo-item">
                                     <div class="dots">
                                         <div class="dot"></div>
@@ -106,325 +109,22 @@ session_start();
                                         <div class="dot"></div>
                                     </div>
                                     <div class="demo-item__thumb">
-                                        <img src="assets/img/demo/index-1.jpg" alt="demo thumbnail">
+                                        <p>Date here</p>
                                         <div class="overlay">
                                             <div class="btn btn-demo">
-                                                View Demo
+                                                View Post
                                             </div>
                                         </div>
                                     </div>
                                     <div class="demo-item__info">
-                                        <h6>Home Version 01</h6>
+                                        <h6>Name of Account</h6>
                                     </div>
                                 </div>
                             </a>
                         </div>
                     </div>
                     <!-- demo single item end -->
-
-                    <!-- demo single item start -->
-                    <div class="col-md-4">
-                        <div class="demo-preview-item mt-50">
-                            <a href="karen/index-2.html">
-                                <div class="demo-item">
-                                    <div class="dots">
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
-                                    </div>
-                                    <div class="demo-item__thumb">
-                                        <img src="assets/img/demo/index-2.jpg" alt="demo thumbnail">
-                                        <div class="overlay">
-                                            <div class="btn btn-demo">
-                                                View Demo
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="demo-item__info">
-                                        <h6>Home Version 02</h6>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- demo single item end -->
-
-                    <!-- demo single item start -->
-                    <div class="col-md-4">
-                        <div class="demo-preview-item mt-50">
-                            <a href="karen/about.html">
-                                <div class="demo-item">
-                                    <div class="dots">
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
-                                    </div>
-                                    <div class="demo-item__thumb">
-                                        <img src="assets/img/demo/about.jpg" alt="demo thumbnail">
-                                        <div class="overlay">
-                                            <div class="btn btn-demo">
-                                                View Demo
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="demo-item__info">
-                                        <h6>About Page</h6>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- demo single item end -->
-
-                    <!-- demo single item start -->
-                    <div class="col-md-4">
-                        <div class="demo-preview-item mt-50">
-                            <a href="karen/service.html">
-                                <div class="demo-item">
-                                    <div class="dots">
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
-                                    </div>
-                                    <div class="demo-item__thumb">
-                                        <img src="assets/img/demo/service.jpg" alt="demo thumbnail">
-                                        <div class="overlay">
-                                            <div class="btn btn-demo">
-                                                View Demo
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="demo-item__info">
-                                        <h6>Service</h6>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- demo single item end -->
-
-                    <!-- demo single item start -->
-                    <div class="col-md-4">
-                        <div class="demo-preview-item mt-50">
-                            <a href="karen/service-details.html">
-                                <div class="demo-item">
-                                    <div class="dots">
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
-                                    </div>
-                                    <div class="demo-item__thumb">
-                                        <img src="assets/img/demo/service-details.jpg" alt="demo thumbnail">
-                                        <div class="overlay">
-                                            <div class="btn btn-demo">
-                                                View Demo
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="demo-item__info">
-                                        <h6>Service Details</h6>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- demo single item end -->
-
-                    <!-- demo single item start -->
-                    <div class="col-md-4">
-                        <div class="demo-preview-item mt-50">
-                            <a href="karen/blog-left-sidebar.html">
-                                <div class="demo-item">
-                                    <div class="dots">
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
-                                    </div>
-                                    <div class="demo-item__thumb">
-                                        <img src="assets/img/demo/blog-left.jpg" alt="demo thumbnail">
-                                        <div class="overlay">
-                                            <div class="btn btn-demo">
-                                                View Demo
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="demo-item__info">
-                                        <h6>Blog Left Sidebar</h6>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- demo single item end -->
-
-                    <!-- demo single item start -->
-                    <div class="col-md-4">
-                        <div class="demo-preview-item mt-50">
-                            <a href="karen/blog-grid-full-width.html">
-                                <div class="demo-item">
-                                    <div class="dots">
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
-                                    </div>
-                                    <div class="demo-item__thumb">
-                                        <img src="assets/img/demo/blog-full.jpg" alt="demo thumbnail">
-                                        <div class="overlay">
-                                            <div class="btn btn-demo">
-                                                View Demo
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="demo-item__info">
-                                        <h6>Blog No Sidebar</h6>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- demo single item end -->
-
-                    <!-- demo single item start -->
-                    <div class="col-md-4">
-                        <div class="demo-preview-item mt-50">
-                            <a href="karen/blog-details.html">
-                                <div class="demo-item">
-                                    <div class="dots">
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
-                                    </div>
-                                    <div class="demo-item__thumb">
-                                        <img src="assets/img/demo/blog-det-right.jpg" alt="demo thumbnail">
-                                        <div class="overlay">
-                                            <div class="btn btn-demo">
-                                                View Demo
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="demo-item__info">
-                                        <h6>Blog Details</h6>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- demo single item end -->
-
-                    <!-- demo single item start -->
-                    <div class="col-md-4">
-                        <div class="demo-preview-item mt-50">
-                            <a href="karen/contact.html">
-                                <div class="demo-item">
-                                    <div class="dots">
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
-                                    </div>
-                                    <div class="demo-item__thumb">
-                                        <img src="assets/img/demo/contact.jpg" alt="demo thumbnail">
-                                        <div class="overlay">
-                                            <div class="btn btn-demo">
-                                                View Demo
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="demo-item__info">
-                                        <h6>Contact</h6>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- demo single item end -->
-                </div>
-            </div>
-        </section>
-        <!-- section end -->
-
-        <!-- section start -->
-        <section class="section-padding pt-10">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="section-title section-space text-center">
-                            <h5 class="sub-title pb-3">EXTRA FEATURES</h5>
-                            <h2 class="h1 title"><span>Extra</span> of Theme Features</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mtn-10">
-                    <!-- single feature item start -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="feature-item text-center mt-10">
-                            <div class="icon">
-                                <img src="assets/img/icon/1.png" alt="icon">
-                            </div>
-                            <h4 class="feature-title">Expert Typography</h4>
-                            <p>Your site’s typography will benefit from beautiful fonts provided by Font Awesome 5 Pro plugin.</p>
-                        </div>
-                    </div>
-                    <!-- single feature item end -->
-
-                    <!-- single feature item start -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="feature-item text-center mt-10">
-                            <div class="icon">
-                                <img src="assets/img/icon/2.png" alt="icon">
-                            </div>
-                            <h4 class="feature-title">Fast Loading Speed</h4>
-                            <p>Karen gets a very high pagespeed scores on Pagespeed Insight, Pingdom Tools & GTmetrix.</p>
-                        </div>
-                    </div>
-                    <!-- single feature item end -->
-
-                    <!-- single feature item start -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="feature-item text-center mt-10">
-                            <div class="icon">
-                                <img src="assets/img/icon/3.png" alt="icon">
-                            </div>
-                            <h4 class="feature-title">SEO Optimization</h4>
-                            <p>All elements are fully optimized to help your site compete with other similar ones in search engine.</p>
-                        </div>
-                    </div>
-                    <!-- single feature item end -->
-
-                    <!-- single feature item start -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="feature-item text-center mt-10">
-                            <div class="icon">
-                                <img src="assets/img/icon/4.png" alt="icon">
-                            </div>
-                            <h4 class="feature-title">Cross-browser Adaptability</h4>
-                            <p>We run thorough tests on different browsers to ensure optimal performance on all devices.</p>
-                        </div>
-                    </div>
-                    <!-- single feature item end -->
-
-                    <!-- single feature item start -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="feature-item text-center mt-10">
-                            <div class="icon">
-                                <img src="assets/img/icon/5.png" alt="icon">
-                            </div>
-                            <h4 class="feature-title">Prompt Support</h4>
-                            <p>Any issues with theme configuration and site building will be solved promptly by our professionals.</p>
-                        </div>
-                    </div>
-                    <!-- single feature item end -->
-
-                    <!-- single feature item start -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="feature-item text-center mt-10">
-                            <div class="icon">
-                                <img src="assets/img/icon/6.png" alt="icon">
-                            </div>
-                            <h4 class="feature-title">Sass supported</h4>
-                            <p>This template area fully Sass supported. You can change font & color for all elements easily.</p>
-                        </div>
-                    </div>
-                    <!-- single feature item end -->
+					<?php }; ?>
                 </div>
             </div>
         </section>
