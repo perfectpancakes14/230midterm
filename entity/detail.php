@@ -1,6 +1,18 @@
 <?php 
 session_start();
 $i = $_GET['post_id'];
+
+$posts = [];
+$fp=fopen('posts.csv.php','r');
+while(!feof($fp)){
+    $line=fgets(($fp));
+    $line=explode(';', trim($line));
+    array_push($posts, $line);
+}
+array_splice($posts,0,1);
+array_splice($posts, count($posts)-1, 1);
+
+
 ?>
 <html class="no-js" lang="zxx">
 
@@ -74,17 +86,13 @@ $i = $_GET['post_id'];
                     <div class="row align-items-center justify-content-between">
                         <div class="col-6">
                             <div class="hero-slider-content">
-                                <h4 class="slide-subtitle pb-3">Date: (insert date here)</h4>
-                                <h2 class="slide-title">Insert Account Name Here</h2>
+                                <h4 class="slide-subtitle pb-3"><?='Authored by '.$posts[$i][0].' on '.$posts[$i][1]?></h4>
+                                <h2 class="slide-title"><?=$posts[$i][2]?></h2>
 								
-								<p>Moby-Dick, written by Herman Melville, follows the journey of Ishmael, a sailor who joins the whaling ship Pequod, captained by the enigmatic and vengeful Ahab. Ahab is obsessed with hunting down Moby Dick, a massive white whale that had previously destroyed his ship and bitten off his leg.
-
-As the Pequod sails across the oceans, Ishmael encounters a diverse crew and learns about the whaling industry, the dangers of the sea, and Ahab's relentless quest for revenge. The novel explores themes of obsession, the struggle between man and nature, and the limits of knowledge.
-
-In the climactic confrontation, Ahab finally finds Moby Dick, leading to a tragic and destructive showdown that results in the loss of the ship and its crew, with Ishmael as the sole survivor, left to tell the tale. The novel is both an adventure and a profound meditation on humanity's place in the universe.</p>
-								<?php if(/*the posts email*/ 1==1 /*the session email*/) {?>
-									<a href="edit.php" class="btn btn-all">edit post</a>
-									<a href="delete.php" class="btn btn-all">delete post</a>
+								<p><?=$posts[$i][3]?></p>
+								<?php if(isset($_SESSION['email']) && $_SESSION['email'] == $posts[$i][0]) {?>
+									<a href=<?php echo "edit.php?post_id=".$i?> class="btn btn-all">edit post</a>
+									<a href=<?php echo "delete.php?post_id=".$i?> class="btn btn-all">delete post</a>
 								<?php } ?>
                                 <a href="index.php" class="btn btn-all">Return to Feed</a>
                             </div>

@@ -1,9 +1,1 @@
-<?php
-    die();
-?>
-wattsl6@mymail.nku.edu;10/09/2024;;
-wattsl6@mymail.nku.edu;10/09/2024;;
-wattsl6@mymail.nku.edu;10/09/2024;;
-wattsl6@mymail.nku.edu;10/09/2024
-wattsl6@mymail.nku.edu;10/09/2024;
-wattsl6@mymail.nku.edu;10/09/2024;Test1;test2
+<?php die(); ?>

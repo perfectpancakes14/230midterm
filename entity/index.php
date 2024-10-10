@@ -75,7 +75,7 @@ session_start();
                             <div class="hero-slider-content">
                                 <h4 class="slide-subtitle pb-3">Blogging and Social Media Site</h4>
                                 <h2 class="slide-title">Karen Social</h2>
-                                <a href="" class="btn btn-all">Create Post</a>
+                                <a href="create.php" class="btn btn-all">Create Post</a>
                             </div>
 						</div>
                     </div>
