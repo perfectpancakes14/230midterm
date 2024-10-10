@@ -38,7 +38,6 @@ session_start();
                 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-5JCTSSF');</script>
     <!-- End Google Tag Manager -->
-
 </head>
 
 <body>
