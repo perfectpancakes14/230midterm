@@ -1,12 +1,19 @@
 <?php
 session_start();
-    if(count($_POST)>0){
-            $fp=fopen('posts.csv.php','a+');
-            fputs($fp,$_SESSION['email'].';'.date('m/d/Y').';'.$_POST['title'].';'.$_POST['content'].PHP_EOL);
-            fclose($fp);
-            header('location: index.php');
-            die();
-    }
+
+if(!isset($_SESSION['email']))
+{
+    header('location: ../index.php');
+    die();
+}
+
+if(count($_POST)>0){
+    $fp=fopen('posts.csv.php','a+');
+    fputs($fp,$_SESSION['email'].';'.date('m/d/Y').';'.$_POST['title'].';'.$_POST['content'].PHP_EOL);
+    fclose($fp);
+    header('location: index.php');
+    die();
+}
 ?>
 
 <html class="no-js" lang="zxx">
@@ -65,7 +72,7 @@ session_start();
                     </div>
                     <div class="col-6">
                         <div class="buy-btn text-right">
-                            <a href="../signOut.php" class="btn btn-all" target="_blank">Sign out</a>
+                            <a href="../signOut.php" class="btn btn-all" >Sign out</a>
                         </div>
                     </div>
                 </div>
@@ -92,21 +99,21 @@ session_start();
 
 
 
-
-    <body>
-        <?php
-        //if(strlen())
-        ?>
+        <style>
+            form{
+                text-align:center;
+            }
+            
+        </style>
+    
         <form method="POST">
-            <label>Title</label><br />
+            <label><h3>Title</h3></label><br />
             <textarea name="title" rows="1" cols="50" required="required"></textarea>
             <br /><br />
-            <label>Contents</label><br />
-            
-			<textarea name="content" rows="9" cols="50" required="required"></textarea>
-            <!--<input name="content" type="text" rows="4" cols="45" />-->
+            <label><h3>Contents</h3></label><br />
+		    <textarea name="content" rows="9" cols="50" required="required"></textarea>
             <br /><br />
-            <button type="submit">Post</button>
+            <button type="submit" class="btn btn-all">Post</button>
         </form> 
 
     </body>

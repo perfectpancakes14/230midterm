@@ -1,7 +1,15 @@
 <?php
 session_start();
 $i = $_GET['post_id'];
+
+if(!isset($_SESSION['email']))
+    {
+        header('location: ../index.php');
+        die();
+    }
+
 if(count($_POST)>0){
+
     $posts = [];
     $fp=fopen('posts.csv.php','r');
     while(!feof($fp)){
@@ -12,8 +20,6 @@ if(count($_POST)>0){
     fclose($fp);
     array_splice($posts,0,1);
     array_splice($posts, count($posts)-1, 1);
-    echo '<pre>';
-    print_r($posts);
     
     $posts[$i][2] = $_POST['title'];
     $posts[$i][3] = $_POST['content'].PHP_EOL;
@@ -25,10 +31,9 @@ if(count($_POST)>0){
         fwrite($fp,$line);
     }
     fclose($fp);
-    echo '<pre>';
-    print_r($posts);
     header('location: index.php');
     die();
+
 }
 
 
@@ -90,7 +95,7 @@ if(count($_POST)>0){
                     </div>
                     <div class="col-6">
                         <div class="buy-btn text-right">
-                            <a href="../signOut.php" class="btn btn-all" target="_blank">Sign out</a>
+                            <a href="../signOut.php" class="btn btn-all">Sign out</a>
                         </div>
                     </div>
                 </div>
@@ -118,20 +123,21 @@ if(count($_POST)>0){
 
 
 
-    <body>
-        <?php
-        //if(strlen())
-        ?>
+    
+        <style>
+            form{
+                text-align:center;
+            }
+        </style>
+
         <form method="POST">
-            <label>Title</label><br />
+            <label><h3>Title</h3></label><br />
             <textarea name="title" rows="1" cols="50" required="required" ></textarea>
             <br /><br />
-            <label>Contents</label><br />
-            
+            <label><h3>Contents</h3></label><br />
 			<textarea name="content" rows="9" cols="50" required="required"></textarea>
-            <!--<input name="content" type="text" rows="4" cols="45" />-->
             <br /><br />
-            <button type="submit">Edit Post</button>
+            <button type="submit" class="btn btn-all">Edit Post</button>
         </form> 
 
     </body>

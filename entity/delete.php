@@ -3,6 +3,12 @@
 
     $i = $_GET['post_id'];
 
+    if(!isset($_SESSION['email']))
+    {
+        header('location: ../index.php');
+        die();
+    }
+
     $posts = [];
     $fp=fopen('posts.csv.php','r');
     while(!feof($fp)){
@@ -82,7 +88,7 @@
                     </div>
                     <div class="col-6">
                         <div class="buy-btn text-right">
-                            <a href="../signOut.php" class="btn btn-all" target="_blank">Sign out</a>
+                            <a href="../signOut.php" class="btn btn-all" >Sign out</a>
                         </div>
                     </div>
                 </div>
@@ -100,12 +106,23 @@
                             <div class="hero-slider-content">
                                 <h4 class="slide-subtitle pb-3">Blogging and Social Media Site</h4>
                                 <h2 class="slide-title">Karen Social</h2>
-                                <a href="index.php" class="btn btn-all">Return to Feed</a>
+                                <br /><br />
+                                
                             </div>
 						</div>
                     </div>
                 </div>
         </section>
+        <style>
+            .deleted-post{
+                text-align:center;
+            }
+        </style>
+        <div class="deleted-post">
+            <h3>Successfully Deleted Post</h3>
+            <br /><br />
+            <a href="index.php" class="btn btn-all">Return to Feed</a>
+        </div>
         <!-- section end -->
     </main>
 </body>

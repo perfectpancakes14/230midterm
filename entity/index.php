@@ -1,6 +1,12 @@
 <?php
 session_start();
 
+if(!isset($_SESSION['email']))
+{
+    header('location: ../index.php');
+    die();
+}
+
 $posts = [];
 $fp=fopen('posts.csv.php','r');
 while(!feof($fp)){
@@ -68,7 +74,7 @@ array_splice($posts, count($posts)-1, 1);
                     </div>
                     <div class="col-6">
                         <div class="buy-btn text-right">
-                            <a href="../signOut.php" class="btn btn-all" target="_blank">Sign out</a>
+                            <a href="../signOut.php" class="btn btn-all" >Sign out</a>
                         </div>
                     </div>
                 </div>
