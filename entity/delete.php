@@ -20,7 +20,7 @@
     fwrite($fp, "<?php die(); ?>".PHP_EOL);
     for($j=0; $j<count($posts); $j++){
         $line = implode(';', $posts[$j]);
-        fwrite($fp,$line.PHP_EOL);
+        fwrite($fp,$line);
     }
     fclose($fp);
 ?>

@@ -1,5 +1,16 @@
 <?php
 session_start();
+
+$posts = [];
+$fp=fopen('posts.csv.php','r');
+while(!feof($fp)){
+    $line=fgets(($fp));
+    $line=explode(';',$line);
+    array_push($posts, $line);
+}
+fclose($fp);
+array_splice($posts,0,1);
+array_splice($posts, count($posts)-1, 1);
 ?>
 <html class="no-js" lang="zxx">
 
@@ -97,11 +108,14 @@ session_start();
                 <div class="row mtn-50">
                     <!-- demo single item start -->
 					<?php 
-					for($i=0;$i<9;$i++){ 
+                    $counter = 0;
+                    $mostRecent = count($posts)-1;
+                    while($counter<9 && array_key_exists($mostRecent,$posts)){
+					//for($i=0;$i<9;$i++){ 
 					?>
                     <div class="col-md-4">
                         <div class="demo-preview-item mt-50">
-                            <?php echo "<a href=detail.php?post_id=".$i.">"?>
+                            <?php echo "<a href=detail.php?post_id=".$mostRecent.">"?>
                                 <div class="demo-item">
                                     <div class="dots">
                                         <div class="dot"></div>
@@ -109,7 +123,7 @@ session_start();
                                         <div class="dot"></div>
                                     </div>
                                     <div class="demo-item__thumb">
-                                        <p>Date here</p>
+                                        <p><?=$posts[$mostRecent][1]?></p>
                                         <div class="overlay">
                                             <div class="btn btn-demo">
                                                 View Post
@@ -117,14 +131,18 @@ session_start();
                                         </div>
                                     </div>
                                     <div class="demo-item__info">
-                                        <h6>Name of Account</h6>
+                                        <h6><?=$posts[$mostRecent][2]?></h6>
                                     </div>
                                 </div>
                             </a>
                         </div>
                     </div>
                     <!-- demo single item end -->
-					<?php }; ?>
+					<?php
+                        $mostRecent--;
+                        $counter++;
+                     }; 
+                     ?>
                 </div>
             </div>
         </section>

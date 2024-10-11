@@ -12,21 +12,23 @@ if(count($_POST)>0){
     fclose($fp);
     array_splice($posts,0,1);
     array_splice($posts, count($posts)-1, 1);
-    //echo '<pre>';
-    //print_r($posts);
+    echo '<pre>';
+    print_r($posts);
+    
     $posts[$i][2] = $_POST['title'];
-    $posts[$i][3] = $_POST['content'];
-    //$line = implode(';', $posts[$i]);
-    echo $line;
-    //echo '<pre>';
-    //print_r($posts);
+    $posts[$i][3] = $_POST['content'].PHP_EOL;
+    
     $fp=fopen('posts.csv.php','w');
     fwrite($fp, "<?php die(); ?>".PHP_EOL);
     for($j=0; $j<count($posts); $j++){
         $line = implode(';', $posts[$j]);
-        fwrite($fp,$line.PHP_EOL);
+        fwrite($fp,$line);
     }
     fclose($fp);
+    echo '<pre>';
+    print_r($posts);
+    header('location: index.php');
+    die();
 }
 
 
